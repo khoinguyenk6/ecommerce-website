@@ -1,0 +1,16 @@
+@import '@styles/mixin.module.scss';
+@import '@styles/variable.module.scss';
+
+.containerHeader {
+    display: flex;
+    justify-content: center;
+}
+
+.boxIcon {
+    @include radius_common(50%);
+
+    width: 26px;
+    height: 26px;
+    background-color: #1877f2;
+
+}
