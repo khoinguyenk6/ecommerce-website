@@ -1,9 +1,10 @@
 import BoxIcon from "./BoxIcon/BoxIcon";
-import { dataBoxIcon } from "./constans";
+import Menu from "./Menu/Menu";
+import { dataBoxIcon, dataMenu } from "./constans";
 import styles from "./styles.module.scss";
 
 function MyHeader() {
-    const { containerBoxIcon } = styles;
+    const { containerBoxIcon , containerMenu } = styles;
     return ( 
     <div>
         <div>
@@ -12,7 +13,11 @@ function MyHeader() {
                     return <BoxIcon type={item.type} href={item.href} />
                 })}
             </div>
-            <div></div>
+            <div className={containerMenu}>
+                {dataMenu.map((item) =>{
+                    return <Menu content={item.content} href={item.href} />
+                })}
+            </div>
         </div>
         <div></div>
         <div></div>
