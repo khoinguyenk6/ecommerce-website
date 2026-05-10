@@ -1,11 +1,16 @@
 import BoxIcon from "./BoxIcon/BoxIcon";
+import { dataBoxIcon } from "./constans";
+import styles from "./styles.module.scss";
 
 function MyHeader() {
+    const { containerBoxIcon } = styles;
     return ( 
     <div>
         <div>
-            <div>
-                <BoxIcon type={'fb'} href={''} />
+            <div className={containerBoxIcon}>
+                {dataBoxIcon.map((item) =>{
+                    return <BoxIcon type={item.type} href={item.href} />
+                })}
             </div>
             <div></div>
         </div>
